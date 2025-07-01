@@ -1,0 +1,23 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/truongdang/Documents/graduation_project/diffbot_control_ws/install/diffbot/include/**",
+        "/opt/ros/jazzy/include/**",
+        "/home/truongdang/Documents/graduation_project/diffbot_control_ws/src/diffbot/include/**",
+        "/home/truongdang/Documents/graduation_project/diffbot_control_ws/src/diffbot_msgs/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

@@ -1,0 +1,12 @@
+{
+        "python.autoComplete.extraPaths": [
+                "/home/truongdang/Documents/graduation_project/diffbot_control_ws/install/diffbot/lib/python3.12/site-packages",
+                "/opt/ros/jazzy/lib/python3.12/site-packages",
+                "/opt/drake/lib/python3.12/site-packages"
+        ],
+        "python.analysis.extraPaths": [
+                "/home/truongdang/Documents/graduation_project/diffbot_control_ws/install/diffbot/lib/python3.12/site-packages",
+                "/opt/ros/jazzy/lib/python3.12/site-packages",
+                "/opt/drake/lib/python3.12/site-packages"
+        ]
+}
