@@ -15,7 +15,7 @@ diff_controller:
     base_frame_id: base_link
 
     position_feedback: false
-    cmd_vel_timeout: 0.5
+    cmd_vel_timeout: 0.3
 
     linear.x.min_velocity: -0.15
     linear.x.max_velocity: 0.15
