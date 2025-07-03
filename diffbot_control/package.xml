@@ -12,6 +12,19 @@
   <depend>rclcpp</depend>
   <depend>diffbot_msgs</depend>
   
+  <build_depend>controller_interface</build_depend>
+  <exec_depend>controller_interface</exec_depend>
+
+  <build_depend>hardware_interface</build_depend>
+  <exec_depend>hardware_interface</exec_depend>
+
+  <build_depend>ros2_control</build_depend>
+  <exec_depend>ros2_control</exec_depend>
+
+  <exec_depend>joint_state_broadcaster</exec_depend>
+  <exec_depend>forward_command_controller</exec_depend>
+  <exec_depend>diff_drive_controller</exec_depend>
+
   <exec_depend>xacro</exec_depend>
 
   <export>
