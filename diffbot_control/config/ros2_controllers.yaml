@@ -15,7 +15,7 @@ diff_controller:
     base_frame_id: base_link
 
     position_feedback: false
-    cmd_vel_timeout: 0.3
+    cmd_vel_timeout: 0.7
 
     linear.x.min_velocity: -0.15
     linear.x.max_velocity: 0.15
@@ -25,5 +25,5 @@ diff_controller:
 
     left_wheel_names: ['left_wheel_joint']
     right_wheel_names: ['right_wheel_joint']
-    wheel_separation: 0.157
+    wheel_separation: 0.155
     wheel_radius: 0.035
