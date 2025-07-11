@@ -17,7 +17,7 @@ def generate_launch_description():
         robot_state_publisher = IncludeLaunchDescription(
                         PythonLaunchDescriptionSource([os.path.join(
                         get_package_share_directory(package_name),'launch','robot_state_publisher.launch.py'
-                        )]))
+                        )]), launch_arguments={'use_sim_time': 'true'}.items())
 
         # Gazebo Sim
         world = os.path.join(
@@ -60,10 +60,10 @@ def generate_launch_description():
                 arguments=['diff_controller']
         )
 
-        joint_broadcaster_spawner = Node(
+        joint_state_broadcaster_spawner = Node(
                 package='controller_manager',
                 executable='spawner',
-                arguments=['joint_broadcaster'],
+                arguments=['joint_state_broadcaster'],
         )
 
         return LaunchDescription([
@@ -72,5 +72,5 @@ def generate_launch_description():
                 spawn,
                 bridge,
                 diff_controller_spawner,
-                joint_broadcaster_spawner,
+                joint_state_broadcaster_spawner,
         ])
