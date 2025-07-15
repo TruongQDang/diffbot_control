@@ -73,15 +73,22 @@ def generate_launch_description():
 
     # myslam
     myslam = IncludeLaunchDescription(
-	PythonLaunchDescriptionSource([os.path.join(
-	get_package_share_directory('myslam'),'launch','online_async_launch.py'
-	)]), launch_arguments={'use_sim_time': 'false'}.items()
+        PythonLaunchDescriptionSource([os.path.join(
+        get_package_share_directory('myslam'),'launch','online_async_launch.py'
+        )]), launch_arguments={'use_sim_time': 'false'}.items()
     )
 
     # micro-ros-agent
     micro_ros = ExecuteProcess(
-            cmd=['micro_ros_agent', 'serial', '--dev', '/dev/ttyACM0'],
-            output='screen'
+        cmd=['micro_ros_agent', 'serial', '--dev', '/dev/ttyACM0'],
+        output='screen'
+    )
+
+    # rplidar
+    rplidar = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([os.path.join(
+        get_package_share_directory('slllidar_ros2'),'launch','sllidar_c1_launch.py'
+        )]), launch_arguments={'frame_id': 'lidar_frame'}.items()
     )
 
     nodes = [
@@ -90,7 +97,8 @@ def generate_launch_description():
         joint_state_broadcaster_spawner,
         delay_robot_controller_spawner_after_joint_state_broadcaster_spawner,
         myslam,
-        micro_ros
+        micro_ros,
+        rplidar
     ]
 
     return LaunchDescription(nodes)
