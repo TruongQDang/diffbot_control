@@ -1,0 +1,2 @@
+uint16 left_motor_pos
+uint16 right_motor_pos

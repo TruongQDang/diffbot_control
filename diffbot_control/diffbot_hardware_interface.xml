@@ -1,7 +1,7 @@
-<library path="diffbot_control">
+<library path="diffbot_hardware_interface">
         <class
-                name="diffbot_system_hw/DiffBotSystemHardware"
-                type="diffbot_system_hw::DiffBotSystemHardware"
+                name="diffbot_hardware_interface/DiffbotHardwareInterface"
+                type="diffbot_hardware_interface::DiffbotHardwareInterface"
                 base_class_type="hardware_interface::SystemInterface">
                 <description>A topic based ros2_control hardware interface for differential drive robot</description>
         </class>

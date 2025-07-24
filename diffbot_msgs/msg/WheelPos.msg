@@ -1,2 +1,0 @@
-uint16 left_wheel_pos
-uint16 right_wheel_pos

@@ -23,12 +23,20 @@
                                 <state_interface name="position" />
                         </joint>
                 </ros2_control>
+
+                <gazebo>
+                        <plugin name="gz_ros2_control::GazeboSimROS2ControlPlugin"
+                                filename="libgz_ros2_control-system.so">
+                                <parameters>$(find diffbot_control)/config/ros2_controllers.yaml</parameters>
+                                <parameters>$(find diffbot_control)/config/gazebo_ros2_controllers.yaml</parameters>
+                        </plugin>
+                </gazebo>
         </xacro:if>
         
         <xacro:unless value="$(arg sim_mode)">
                 <ros2_control name="RealRobot" type="system">
                         <hardware>
-                                <plugin>diffbot_system_hw/DiffBotSystemHardware</plugin>
+                                <plugin>diffbot_hardware_interface/DiffbotHardwareInterface</plugin>
                                 <param name="left_wheel_name">left_wheel_joint</param>
                                 <param name="right_wheel_name">right_wheel_joint</param>
                                 <param name="angle_resolution">0.001534</param>
@@ -47,13 +55,5 @@
                         </joint>
                 </ros2_control>
         </xacro:unless>
-
-        <gazebo>
-                <plugin name="gz_ros2_control::GazeboSimROS2ControlPlugin"
-                        filename="libgz_ros2_control-system.so">
-                        <parameters>$(find diffbot_control)/config/ros2_controllers.yaml</parameters>
-                        <parameters>$(find diffbot_control)/config/gazebo_ros2_controllers.yaml</parameters>
-                </plugin>
-        </gazebo>
 
 </robot>
